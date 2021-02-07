@@ -1,6 +1,10 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
 }
+footer {
+  margin: 20px;
+  text-align: center;
+}
 .container {
   background: linear-gradient(#dbedf3, #a5e9db);
   border: solid 2px #0e49b5;
