@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Looking for the weather?</h1>
+      <h1>What's the weather now, <span id="today-content"></span>?</h1>
       <form class="citySearch" id="city-search">
         <div class="row">
           <div class="col-1"></div>
@@ -51,12 +51,7 @@
           </div>
         </div>
       </form>
-      <div class="titleToday">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-5"><p id="today-content">Today</p></div>
-        </div>
-      </div>
+
       <div class="displayInfo">
         <div class="row">
           <div class="col-1"></div>
@@ -65,7 +60,7 @@
             <span id="current-temperature">23</span>° <span id="unit">C</span> /
             <a href="#" class="temperatureUnit" id="other-unit">F</a>
           </div>
-          <div class="col-5">
+          <div class="col-4">
             <p>
               felt as <span id="felt-temperature">18</span>°
               <span id="felt-unit">C</span>

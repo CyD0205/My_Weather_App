@@ -3,8 +3,7 @@ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 let day = days[now.getDay()];
 let hours = (now.getHours() < 10 ? '0' : '') + (now.getHours());
 let minutes = (now.getMinutes() < 10 ? '0' : '') + (now.getMinutes());
-let todayInfo = document.querySelector("#today-content");
-todayInfo.innerHTML = `${day}, ${hours}:${minutes}`;
+document.querySelector("#today-content").innerHTML = `${day}, ${hours}:${minutes}`;
 
 function searchCity(event) {
   event.preventDefault(); 
