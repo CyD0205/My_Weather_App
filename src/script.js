@@ -57,10 +57,15 @@ function convertTempAndUnit(event) {
   let otherTempUnit = document.querySelector("#other-unit");
   let preciseFTemp = tempToUpdate.innerHTML * 1.8 + 32;
   let preciseCTemp = (tempToUpdate.innerHTML - 32) / 1.8;
+  let feltTempToUpdate = document.querySelector("#felt-temperature");
+  let preciseFFeltTemp = feltTempToUpdate.innerHTML * 1.8 + 32;
+  let preciseCFeltTemp = (feltTempToUpdate.innerHTML - 32) / 1.8;
   if (tempUnit.innerHTML === "C") {
     tempToUpdate.innerHTML = Math.round(preciseFTemp);
+    feltTempToUpdate.innerHTML = Math.round(preciseFFeltTemp);
   } else {
     tempToUpdate.innerHTML = Math.round(preciseCTemp);
+    feltTempToUpdate.innerHTML = Math.round(preciseCFeltTemp);
   };
 
   tempUnit.innerHTML = otherTempUnit.innerHTML;
