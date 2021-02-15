@@ -19,6 +19,7 @@ function updateTempAndCity(response) {
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
+  document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 };

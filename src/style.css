@@ -54,7 +54,6 @@ footer {
   font-size: 28px;
   font-weight: 600;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .temperatureUnit {
   color: #0e49b5;
@@ -67,8 +66,7 @@ footer {
   color: #0e49b5;
   font-size: 18px;
   font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  vertical-align: middle;
 }
 .titleToday,
 .titleNextDays {
