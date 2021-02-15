@@ -16,6 +16,7 @@ function searchCity(event) {
 function updateTempAndCity(response) { 
   document.querySelector("#city-to-update").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#weather-description").innerHTML = response.weather.description;
 };
 document.querySelector("#city-search").addEventListener("submit", searchCity);
 
@@ -34,6 +35,7 @@ function searchCurrentInfo(position) {
 function displayTempAndCity (response) {
   document.querySelector("#city-to-update").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#weather-description").innerHTML = response.weather.description;
 }
 document.querySelector("#here-now-weather").addEventListener("click", getCurrentPosition);
 
