@@ -26,7 +26,7 @@ function updateTempAndCity(response) {
 document.querySelector("#city-search").addEventListener("submit", searchCity);
 
 function getCurrentPosition (event) {
-  event.preventDefault(); 
+  //event.preventDefault(); 
   navigator.geolocation.getCurrentPosition(searchCurrentInfo);
 }
 
@@ -70,3 +70,4 @@ function convertTempAndUnit(event) {
 }
 let unitChange = document.querySelector("#other-unit");
 unitChange.addEventListener("click", convertTempAndUnit);
+getCurrentPosition(null);
