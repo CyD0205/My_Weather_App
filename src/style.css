@@ -5,7 +5,8 @@ h1 {
   color: #0e49b5;
   font-size: 36px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
   text-align: center;
 }
 footer {
@@ -20,9 +21,6 @@ footer {
   margin: 0 auto;
   margin-top: 30px;
   max-width: 60%;
-}
-.citySearch {
-  margin-top: 30px;
 }
 .btn-outline-success {
   border-color: #00b7c2;
@@ -53,7 +51,6 @@ footer {
   color: #0e49b5;
   font-size: 28px;
   font-weight: 600;
-  margin-top: 20px;
 }
 .temperatureUnit {
   color: #0e49b5;
@@ -74,8 +71,7 @@ footer {
   font-size: 28px;
   font-weight: 400;
   margin-left: 0;
-  margin-bottom: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .nextDays {
