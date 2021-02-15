@@ -16,6 +16,7 @@ function searchCity(event) {
 function updateTempAndCity(response) { 
   document.querySelector("#city-to-update").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#felt-temperature").innerHTML = Math.round(response.data.main.feels_like);
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
@@ -39,6 +40,7 @@ function searchCurrentInfo(position) {
 function displayTempAndCity (response) {
   document.querySelector("#city-to-update").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#felt-temperature").innerHTML = Math.round(response.data.main.feels_like);
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
@@ -70,4 +72,5 @@ function convertTempAndUnit(event) {
 }
 let unitChange = document.querySelector("#other-unit");
 unitChange.addEventListener("click", convertTempAndUnit);
+
 getCurrentPosition(null);
