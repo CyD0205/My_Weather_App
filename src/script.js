@@ -19,6 +19,8 @@ function updateTempAndCity(response) {
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
+  document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 };
 document.querySelector("#city-search").addEventListener("submit", searchCity);
 
@@ -40,6 +42,8 @@ function displayTempAndCity (response) {
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
+  document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 }
 document.querySelector("#here-now-weather").addEventListener("click", getCurrentPosition);
 
