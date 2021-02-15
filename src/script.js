@@ -18,7 +18,7 @@ function updateTempAndCity(response) {
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
-  document.querySelector("#weather-description").src = apiUrlIcon;
+  document.querySelector("#weather-icon").src = apiUrlIcon;
 };
 document.querySelector("#city-search").addEventListener("submit", searchCity);
 
@@ -39,7 +39,7 @@ function displayTempAndCity (response) {
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
   let iconToDisplay = response.data.weather[0].icon;
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
-  document.querySelector("#weather-description").src = apiUrlIcon;
+  document.querySelector("#weather-icon").src = apiUrlIcon;
 }
 document.querySelector("#here-now-weather").addEventListener("click", getCurrentPosition);
 

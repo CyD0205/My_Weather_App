@@ -60,25 +60,32 @@
       <div class="displayInfo">
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-5"><p id="city-to-update">Liège</p></div>
-          <div class="col-3">
-            <p>
-              <span id="current-temperature">3</span>°
-              <span id="unit">C</span> /
-              <a href="#" class="temperatureUnit" id="other-unit">F</a>
-            </p>
-          </div>
+          <div class="col-4"><p id="city-to-update">Liège</p></div>
           <div class="col-2">
-            <p>
-              <img
-                id="weather-description"
-                src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="Weather Icon"
-              />
-            </p>
+            <span id="current-temperature">3</span>° <span id="unit">C</span> /
+            <a href="#" class="temperatureUnit" id="other-unit">F</a>
           </div>
         </div>
       </div>
+
+      <div>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-3"></div>
+          <div class="col-2">
+            <img
+              class="currentIcon"
+              id="weather-icon"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather Icon"
+            />
+          </div>
+          <div class="col-4">
+            <p class="otherInfo">Windspeed: <br />Humidity:</p>
+          </div>
+        </div>
+      </div>
+
       <div class="titleNextDays">
         <div class="row">
           <div class="col-1"></div>

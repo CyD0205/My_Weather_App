@@ -3,7 +3,7 @@ body {
 }
 h1 {
   color: #0e49b5;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 600;
   margin-top: 30px;
   text-align: center;
@@ -18,11 +18,11 @@ footer {
   border-radius: 20px;
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 30px;
   max-width: 60%;
 }
 .citySearch {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .btn-outline-success {
   border-color: #00b7c2;
@@ -51,23 +51,33 @@ footer {
 }
 .displayInfo {
   color: #0e49b5;
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 600;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .temperatureUnit {
   color: #0e49b5;
-  font-size: 32px;
+  font-size: 28px;
+}
+.currentIcon {
+  color: #0e49b5;
+}
+.otherInfo {
+  color: #0e49b5;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .titleToday,
 .titleNextDays {
   color: #00b7c2;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 400;
   margin-left: 0;
   margin-bottom: 5px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .nextDays {
