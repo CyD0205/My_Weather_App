@@ -9,10 +9,11 @@ let minutes = (now.getMinutes() < 10 ? '0' : '') + (now.getMinutes());
 document.querySelector("#today-content").innerHTML = `${day} ${date} ${month}, at ${hours}:${minutes}`;
 
 function searchCity(event) {
+  event.preventDefault();
   let cityToSearch = document.querySelector("#city-input").value;
-  if (cityToSearch === "") {
-    cityToSearch = "Hawai";
-  }
+  //if (cityToSearch === " ") {
+    //cityToSearch = "Hawai";
+  //}
   let apiKey = "3c07c1c2ea0bcd61f5682ea2f874a164";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityToSearch}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(updateTempAndCity);
@@ -31,6 +32,7 @@ function updateTempAndCity(response) {
 document.querySelector("#city-search").addEventListener("submit", searchCity);
 
 function getCurrentPosition (event) {
+  event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchCurrentInfo);
 }
 
@@ -81,4 +83,4 @@ function convertTempAndUnit(event) {
 }
 let unitChange = document.querySelector("#other-unit");
 unitChange.addEventListener("click", convertTempAndUnit);
-searchCity(null);
+//searchCity(null);
