@@ -33,7 +33,7 @@ function updateTempAndCity(response) {
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
   document.querySelector("#weather-description").innerHTML = response.data.weather[0].description.replace(response.data.weather[0].description.charAt(0), response.data.weather[0].description.charAt(0).toUpperCase());
-  document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
+  document.querySelector("#windspeed").innerHTML = Math.round(response.data.wind.speed*3.6);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 };
 document.querySelector("#city-search").addEventListener("submit", searchCity);
@@ -60,7 +60,7 @@ function displayTempAndCity (response) {
   let apiUrlIcon = `http://openweathermap.org/img/wn/${iconToDisplay}@2x.png`;
   document.querySelector("#weather-icon").src = apiUrlIcon;
   document.querySelector("#weather-description").innerHTML = response.data.weather[0].description.replace(response.data.weather[0].description.charAt(0), response.data.weather[0].description.charAt(0).toUpperCase());
-  document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
+  document.querySelector("#windspeed").innerHTML = Math.round(response.data.wind.speed*3.6);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 }
 document.querySelector("#here-now-weather").addEventListener("click", getCurrentPosition);
@@ -82,7 +82,6 @@ document.querySelector("#temp-today-plus-2").innerHTML = Math.round(response.dat
 document.querySelector("#temp-today-plus-3").innerHTML = Math.round(response.data.list[23].main.temp);
 document.querySelector("#temp-today-plus-4").innerHTML = Math.round(response.data.list[31].main.temp);
 
-//mettre à jour les icônes forecast
 
 }
 
