@@ -39,6 +39,8 @@ footer {
   border: 1px solid #00b7c2;
   border-radius: 30px;
   color: #ffffff;
+  float: right;
+  margin-right: 10px;
   padding: 7px 12px;
   transition: all 200ms ease-in-out;
 }
@@ -48,12 +50,14 @@ footer {
 }
 .form-control {
   display: inline-block;
+  margin-left: 10px;
   width: 100%;
 }
 .displayInfo {
   color: #0e49b5;
   font-size: 28px;
   font-weight: 600;
+  margin-left: 10px;
   margin-top: 30px;
 }
 .temperatureUnit {
@@ -67,6 +71,7 @@ footer {
   color: #0e49b5;
   font-size: 18px;
   font-weight: 600;
+  margin-left: 10px;
   vertical-align: top;
 }
 .otherInfo {
@@ -75,15 +80,14 @@ footer {
   font-weight: 600;
   vertical-align: middle;
 }
-.titleNextDays {
+.titleNextHours {
   color: #00b7c2;
   font-size: 28px;
   font-weight: 400;
-  margin-left: 0;
-  margin-top: 10px;
+  margin: 10px 0px 20px 10px;
 }
 
-.nextDays {
+.nextHours {
   color: #07689f;
   font-size: 20px;
   font-weight: 400;
