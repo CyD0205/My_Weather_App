@@ -72,10 +72,18 @@ document.querySelector("#today-plus-2").innerHTML = response.data.list[15].dt_tx
 document.querySelector("#today-plus-3").innerHTML = response.data.list[23].dt_txt;
 document.querySelector("#today-plus-4").innerHTML = response.data.list[31].dt_txt;
 
+document.querySelector("#icon-today-plus-1").src = `http://openweathermap.org/img/wn/${response.data.list[7].weather[0].icon}@2x.png`;
+document.querySelector("#icon-today-plus-2").src = `http://openweathermap.org/img/wn/${response.data.list[15].weather[0].icon}@2x.png`;
+document.querySelector("#icon-today-plus-3").src = `http://openweathermap.org/img/wn/${response.data.list[23].weather[0].icon}@2x.png`;
+document.querySelector("#icon-today-plus-4").src = `http://openweathermap.org/img/wn/${response.data.list[31].weather[0].icon}@2x.png`;
+
 document.querySelector("#temp-today-plus-1").innerHTML = Math.round(response.data.list[7].main.temp);
 document.querySelector("#temp-today-plus-2").innerHTML = Math.round(response.data.list[15].main.temp);
 document.querySelector("#temp-today-plus-3").innerHTML = Math.round(response.data.list[23].main.temp);
 document.querySelector("#temp-today-plus-4").innerHTML = Math.round(response.data.list[31].main.temp);
+
+//mettre à jour les icônes forecast
+
 }
 
 function convertTempAndUnit(event) {
