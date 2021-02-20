@@ -12,6 +12,8 @@ function searchDefaultCity (city) {
 let apiKey = "3c07c1c2ea0bcd61f5682ea2f874a164";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(updateTempAndCity);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function searchCity(event) {
@@ -20,6 +22,8 @@ function searchCity(event) {
   let apiKey = "3c07c1c2ea0bcd61f5682ea2f874a164";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityToSearch}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(updateTempAndCity);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityToSearch}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 };
 function updateTempAndCity(response) { 
   document.querySelector("#city-to-update").innerHTML = response.data.name;
@@ -45,6 +49,8 @@ function searchCurrentInfo(position) {
   let apiKey = "3c07c1c2ea0bcd61f5682ea2f874a164";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayTempAndCity);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 function displayTempAndCity (response) {
   document.querySelector("#city-to-update").innerHTML = response.data.name;
@@ -58,6 +64,19 @@ function displayTempAndCity (response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
 }
 document.querySelector("#here-now-weather").addEventListener("click", getCurrentPosition);
+
+function displayForecast (response) {
+console.log(response.data);
+document.querySelector("#today-plus-1").innerHTML = response.data.list[7].dt_txt;
+document.querySelector("#today-plus-2").innerHTML = response.data.list[15].dt_txt;
+document.querySelector("#today-plus-3").innerHTML = response.data.list[23].dt_txt;
+document.querySelector("#today-plus-4").innerHTML = response.data.list[31].dt_txt;
+
+document.querySelector("#temp-today-plus-1").innerHTML = Math.round(response.data.list[7].main.temp);
+document.querySelector("#temp-today-plus-2").innerHTML = Math.round(response.data.list[15].main.temp);
+document.querySelector("#temp-today-plus-3").innerHTML = Math.round(response.data.list[23].main.temp);
+document.querySelector("#temp-today-plus-4").innerHTML = Math.round(response.data.list[31].main.temp);
+}
 
 function convertTempAndUnit(event) {
   event.preventDefault();
