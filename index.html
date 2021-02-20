@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>What's the weather now,<br /><span id="today-content"></span>?</h1>
+      <h1>What's the weather?</h1>
       <form class="citySearch" id="city-search">
         <div class="row">
           <div class="col-1"></div>
@@ -55,7 +55,9 @@
       <div class="displayInfo">
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-5"><p id="city-to-update">Bruxelles</p></div>
+          <div class="col-5">
+            <span id="city-to-update">Bruxelles</span>
+          </div>
           <div class="col-2">
             <span id="current-temperature">23</span>°
             <span id="unit" class="temperatureUnit">C</span
@@ -63,10 +65,19 @@
             <a href="#" class="temperatureUnit" id="other-unit">F</a>
           </div>
           <div class="col-4">
-            <p>
+            <span>
               felt as <span id="felt-temperature">18</span>°
               <!--<span id="felt-unit">C</span>-->
-            </p>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dateAndTime">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-7">
+            <span id="today-content"></span>
           </div>
         </div>
       </div>
@@ -84,13 +95,11 @@
             />
           </div>
           <div class="col-4">
-            <p>
-              <span id="weather-description"></span>
-              <br />
-              Windspeed: <span id="windspeed"></span> m/sec
-              <br />
-              Humidity: <span id="humidity"></span> %
-            </p>
+            <ul>
+              <li id="weather-description"></li>
+              <li>Windspeed: <span id="windspeed"></span> m/sec</li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -98,45 +107,45 @@
       <div class="titleNextDays">
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-5"><p>In the next five days</p></div>
+          <div class="col-5"><span>In the next five days</span></div>
         </div>
       </div>
       <div class="nextDays">
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-2"><p>Tomorrow</p></div>
-          <div class="col-2"><p>Monday</p></div>
-          <div class="col-2"><p>Tuesday</p></div>
-          <div class="col-2"><p>Wednesday</p></div>
-          <div class="col-2"><p>Thursday</p></div>
+          <div class="col-2"><span>Tomorrow</span></div>
+          <div class="col-2"><span>Monday</span></div>
+          <div class="col-2"><span>Tuesday</span></div>
+          <div class="col-2"><span>Wednesday</span></div>
+          <div class="col-2"><span>Thursday</span></div>
         </div>
         <div class="icons">
           <div class="row">
             <div class="col-1"></div>
             <div class="col-2">
-              <p><i class="fas fa-cloud"></i></p>
+              <span><i class="fas fa-cloud"></i></span>
             </div>
             <div class="col-2">
-              <p><i class="fas fa-cloud-sun-rain"></i></p>
+              <span><i class="fas fa-cloud-sun-rain"></i></span>
             </div>
             <div class="col-2">
-              <p><i class="fas fa-cloud-sun-rain"></i></p>
+              <span><i class="fas fa-cloud-sun-rain"></i></span>
             </div>
             <div class="col-2">
-              <p><i class="fas fa-bolt"></i></p>
+              <span><i class="fas fa-bolt"></i></span>
             </div>
             <div class="col-2">
-              <p><i class="fas fa-cloud-sun-rain"></i></p>
+              <span><i class="fas fa-cloud-sun-rain"></i></span>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-2"><p>4° C</p></div>
-          <div class="col-2"><p>3° C</p></div>
-          <div class="col-2"><p>3° C</p></div>
-          <div class="col-2"><p>2° C</p></div>
-          <div class="col-2"><p>5° C</p></div>
+          <div class="col-2"><span>4° C</span></div>
+          <div class="col-2"><span>3° C</span></div>
+          <div class="col-2"><span>3° C</span></div>
+          <div class="col-2"><span>2° C</span></div>
+          <div class="col-2"><span>5° C</span></div>
         </div>
       </div>
     </div>

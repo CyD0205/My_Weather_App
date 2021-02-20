@@ -9,6 +9,9 @@ h1 {
   margin-top: 40px;
   text-align: center;
 }
+ul {
+  list-style-type: none;
+}
 footer {
   margin: 20px;
   text-align: center;
@@ -59,6 +62,12 @@ footer {
 }
 .currentIcon {
   color: #0e49b5;
+}
+.dateAndTime {
+  color: #0e49b5;
+  font-size: 18px;
+  font-weight: 600;
+  vertical-align: top;
 }
 .otherInfo {
   color: #0e49b5;
