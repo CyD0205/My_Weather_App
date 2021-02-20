@@ -88,12 +88,32 @@ function convertTempAndUnit(event) {
   let feltTempToUpdate = document.querySelector("#felt-temperature");
   let preciseFFeltTemp = feltTempToUpdate.innerHTML * 1.8 + 32;
   let preciseCFeltTemp = (feltTempToUpdate.innerHTML - 32) / 1.8;
+  let dayPlus1Temp = document.querySelector("#temp-today-plus-1");
+  let preciseFTempDayPlus1 = dayPlus1Temp.innerHTML * 1.8 + 32;
+  let preciseCTempDayPlus1 = (dayPlus1Temp.innerHTML - 32) / 1.8;
+  let dayPlus2Temp = document.querySelector("#temp-today-plus-2");
+  let preciseFTempDayPlus2 = dayPlus2Temp.innerHTML * 1.8 + 32;
+  let preciseCTempDayPlus2 = (dayPlus2Temp.innerHTML - 32) / 1.8;
+  let dayPlus3Temp = document.querySelector("#temp-today-plus-3");
+  let preciseFTempDayPlus3 = dayPlus3Temp.innerHTML * 1.8 + 32;
+  let preciseCTempDayPlus3 = (dayPlus3Temp.innerHTML - 32) / 1.8;
+  let dayPlus4Temp = document.querySelector("#temp-today-plus-4");
+  let preciseFTempDayPlus4 = dayPlus4Temp.innerHTML * 1.8 + 32;
+  let preciseCTempDayPlus4 = (dayPlus4Temp.innerHTML - 32) / 1.8;
   if (tempUnit.innerHTML === "C") {
     tempToUpdate.innerHTML = Math.round(preciseFTemp);
     feltTempToUpdate.innerHTML = Math.round(preciseFFeltTemp);
+    dayPlus1Temp.innerHTML = Math.round(preciseFTempDayPlus1);
+    dayPlus2Temp.innerHTML = Math.round(preciseFTempDayPlus2);
+    dayPlus3Temp.innerHTML = Math.round(preciseFTempDayPlus3);
+    dayPlus4Temp.innerHTML = Math.round(preciseFTempDayPlus4);
   } else {
     tempToUpdate.innerHTML = Math.round(preciseCTemp);
     feltTempToUpdate.innerHTML = Math.round(preciseCFeltTemp);
+    dayPlus1Temp.innerHTML = Math.round(preciseCTempDayPlus1);
+    dayPlus2Temp.innerHTML = Math.round(preciseCTempDayPlus2);
+    dayPlus3Temp.innerHTML = Math.round(preciseCTempDayPlus3);
+    dayPlus4Temp.innerHTML = Math.round(preciseCTempDayPlus4);
   };
 
   tempUnit.innerHTML = otherTempUnit.innerHTML;
