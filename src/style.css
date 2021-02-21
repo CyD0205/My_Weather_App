@@ -2,11 +2,11 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 h1 {
-  color: #00b7c2;
+  color: #20776e;
   font-size: 36px;
   font-weight: 600;
-  margin-bottom: 50px;
-  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 ul {
@@ -16,9 +16,12 @@ footer {
   margin: 20px;
   text-align: center;
 }
+a {
+  color: #30c5a5;
+}
 .container {
-  background: linear-gradient(#dbedf3, #a5e9db);
-  border: solid 2px #0e49b5;
+  background: linear-gradient(#f7f2d5, #f3e589);
+  border: solid 2px #ec6e4c;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
@@ -26,17 +29,17 @@ footer {
   max-width: 60%;
 }
 .btn-outline-success {
-  border-color: #00b7c2;
-  color: #00b7c2;
+  border-color: #30c5a5;
+  color: #30c5a5;
   transition: all 200ms ease-in-out;
 }
 .btn-outline-success:hover {
-  background-color: #00b7c2;
-  border-color: #00b7c2;
+  background-color: #30c5a5;
+  border-color: #30c5a5;
 }
 .hereNowWeather {
-  background-color: #00b7c2;
-  border: 1px solid #00b7c2;
+  background-color: #30c5a5;
+  border: 1px solid #30c5a5;
   border-radius: 30px;
   color: #ffffff;
   float: right;
@@ -46,7 +49,7 @@ footer {
 }
 .hereNowWeather:hover {
   background-color: transparent;
-  color: #00b7c2;
+  color: #30c5a5;
 }
 .form-control {
   display: inline-block;
@@ -54,48 +57,41 @@ footer {
   width: 100%;
 }
 .displayInfo {
-  color: #0e49b5;
+  color: #30c5a5;
   font-size: 28px;
   font-weight: 600;
   margin-left: 10px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 .temperatureUnit {
-  color: #0e49b5;
+  color: #30c5a5;
   font-size: 20px;
 }
-.currentIcon {
-  color: #0e49b5;
-}
 .dateAndTime {
-  color: #0e49b5;
+  color: #20776e;
   font-size: 18px;
   font-weight: 600;
   margin-left: 10px;
   vertical-align: top;
 }
 .otherInfo {
-  color: #0e49b5;
+  color: #20776e;
   font-size: 18px;
   font-weight: 600;
   vertical-align: middle;
 }
 .titleNextDays {
-  color: #00b7c2;
+  color: #20776e;
   font-size: 28px;
   font-weight: 400;
-  margin: 10px 0px 20px 10px;
+  margin: 0px 0px 10px 10px;
 }
 
 .nextDays {
-  color: #07689f;
-  font-size: 20px;
+  color: #20776e;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1, 5;
+  line-height: 80%;
   margin-bottom: 20px;
   text-align: center;
-}
-.icons {
-  color: #00b7c2;
-  font-size: 36px;
 }
