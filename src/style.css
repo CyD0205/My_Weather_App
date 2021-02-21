@@ -21,7 +21,7 @@ a {
 }
 .container {
   background: linear-gradient(#f7f2d5, #f3e589);
-  border: solid 2px #ec6e4c;
+  border: solid 1px #f2e179;
   border-radius: 20px;
   display: block;
   margin: 0 auto;
