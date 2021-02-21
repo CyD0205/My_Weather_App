@@ -67,10 +67,37 @@ document.querySelector("#here-now-weather").addEventListener("click", getCurrent
 
 function displayForecast (response) {
 console.log(response.data);
-document.querySelector("#today-plus-1").innerHTML = response.data.list[7].dt_txt;
-document.querySelector("#today-plus-2").innerHTML = response.data.list[15].dt_txt;
-document.querySelector("#today-plus-3").innerHTML = response.data.list[23].dt_txt;
-document.querySelector("#today-plus-4").innerHTML = response.data.list[31].dt_txt;
+
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+let dayPlus1 = days[new Date(response.data.list[7].dt_txt).getDay()];
+let datePlus1 = (new Date(response.data.list[7].dt_txt).getDate() < 10 ? '0' : '') + (new Date(response.data.list[7].dt_txt).getDate());
+let monthPlus1 = months[new Date(response.data.list[7].dt_txt).getMonth()];
+let hoursPlus1 = (new Date(response.data.list[7].dt_txt).getHours() < 10 ? '0' : '') + (new Date(response.data.list[7].dt_txt).getHours());
+let minutesPlus1 = (new Date(response.data.list[7].dt_txt).getMinutes() < 10 ? '0' : '') + (new Date(response.data.list[7].dt_txt).getMinutes());
+document.querySelector("#today-plus-1").innerHTML = `${dayPlus1} ${datePlus1} ${monthPlus1}, ${hoursPlus1}:${minutesPlus1}`; 
+
+let dayPlus2 = days[new Date(response.data.list[15].dt_txt).getDay()];
+let datePlus2 = (new Date(response.data.list[15].dt_txt).getDate() < 10 ? '0' : '') + (new Date(response.data.list[15].dt_txt).getDate());
+let monthPlus2 = months[new Date(response.data.list[15].dt_txt).getMonth()];
+let hoursPlus2 = (new Date(response.data.list[15].dt_txt).getHours() < 10 ? '0' : '') + (new Date(response.data.list[15].dt_txt).getHours());
+let minutesPlus2 = (new Date(response.data.list[15].dt_txt).getMinutes() < 10 ? '0' : '') + (new Date(response.data.list[15].dt_txt).getMinutes());
+document.querySelector("#today-plus-2").innerHTML = `${dayPlus2} ${datePlus2} ${monthPlus2}, ${hoursPlus2}:${minutesPlus2}`;
+
+let dayPlus3 = days[new Date(response.data.list[23].dt_txt).getDay()];
+let datePlus3 = (new Date(response.data.list[23].dt_txt).getDate() < 10 ? '0' : '') + (new Date(response.data.list[23].dt_txt).getDate());
+let monthPlus3 = months[new Date(response.data.list[23].dt_txt).getMonth()];
+let hoursPlus3 = (new Date(response.data.list[23].dt_txt).getHours() < 10 ? '0' : '') + (new Date(response.data.list[23].dt_txt).getHours());
+let minutesPlus3 = (new Date(response.data.list[23].dt_txt).getMinutes() < 10 ? '0' : '') + (new Date(response.data.list[23].dt_txt).getMinutes());
+document.querySelector("#today-plus-3").innerHTML = `${dayPlus3} ${datePlus3} ${monthPlus3}, ${hoursPlus3}:${minutesPlus3}`;
+
+let dayPlus4 = days[new Date(response.data.list[31].dt_txt).getDay()];
+let datePlus4 = (new Date(response.data.list[31].dt_txt).getDate() < 10 ? '0' : '') + (new Date(response.data.list[31].dt_txt).getDate());
+let monthPlus4 = months[new Date(response.data.list[31].dt_txt).getMonth()];
+let hoursPlus4 = (new Date(response.data.list[31].dt_txt).getHours() < 10 ? '0' : '') + (new Date(response.data.list[31].dt_txt).getHours());
+let minutesPlus4 = (new Date(response.data.list[31].dt_txt).getMinutes() < 10 ? '0' : '') + (new Date(response.data.list[31].dt_txt).getMinutes());
+document.querySelector("#today-plus-4").innerHTML = `${dayPlus4} ${datePlus4} ${monthPlus4}, ${hoursPlus4}:${minutesPlus4}`;
 
 document.querySelector("#icon-today-plus-1").src = `http://openweathermap.org/img/wn/${response.data.list[7].weather[0].icon}@2x.png`;
 document.querySelector("#icon-today-plus-2").src = `http://openweathermap.org/img/wn/${response.data.list[15].weather[0].icon}@2x.png`;
@@ -81,8 +108,6 @@ document.querySelector("#temp-today-plus-1").innerHTML = Math.round(response.dat
 document.querySelector("#temp-today-plus-2").innerHTML = Math.round(response.data.list[15].main.temp);
 document.querySelector("#temp-today-plus-3").innerHTML = Math.round(response.data.list[23].main.temp);
 document.querySelector("#temp-today-plus-4").innerHTML = Math.round(response.data.list[31].main.temp);
-
-
 }
 
 function convertTempAndUnit(event) {
