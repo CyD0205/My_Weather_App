@@ -104,6 +104,11 @@ document.querySelector("#icon-today-plus-2").src = `http://openweathermap.org/im
 document.querySelector("#icon-today-plus-3").src = `http://openweathermap.org/img/wn/${response.data.list[23].weather[0].icon}@2x.png`;
 document.querySelector("#icon-today-plus-4").src = `http://openweathermap.org/img/wn/${response.data.list[31].weather[0].icon}@2x.png`;
 
+document.querySelector("#descr-today-plus-1").innerHTML = response.data.list[7].weather[0].description.replace(response.data.list[7].weather[0].description.charAt(0), response.data.list[7].weather[0].description.charAt(0).toUpperCase());
+document.querySelector("#descr-today-plus-2").innerHTML = response.data.list[15].weather[0].description.replace(response.data.list[15].weather[0].description.charAt(0), response.data.list[15].weather[0].description.charAt(0).toUpperCase());
+document.querySelector("#descr-today-plus-3").innerHTML = response.data.list[23].weather[0].description.replace(response.data.list[23].weather[0].description.charAt(0), response.data.list[23].weather[0].description.charAt(0).toUpperCase());
+document.querySelector("#descr-today-plus-4").innerHTML = response.data.list[31].weather[0].description.replace(response.data.list[31].weather[0].description.charAt(0), response.data.list[31].weather[0].description.charAt(0).toUpperCase());
+
 document.querySelector("#temp-today-plus-1").innerHTML = Math.round(response.data.list[7].main.temp);
 document.querySelector("#temp-today-plus-2").innerHTML = Math.round(response.data.list[15].main.temp);
 document.querySelector("#temp-today-plus-3").innerHTML = Math.round(response.data.list[23].main.temp);
